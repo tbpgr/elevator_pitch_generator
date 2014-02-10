@@ -1,5 +1,7 @@
 # ElevatorPitchGenerator
 
+[![Build Status](https://travis-ci.org/tbpgr/elevator_pitch_generator.png?branch=master)](https://travis-ci.org/tbpgr/elevator_pitch_generator)
+
 Elevator Pitch Generator is Elevator Pitch Generator.
 
 ## Elevator Pitch

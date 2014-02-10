@@ -1,0 +1,9 @@
+# encoding: utf-8
+
+needs "For creator"
+target "who supply some product"
+product_name "The Elevator Pitch Generator"
+category "is a generator of Elevator Pitch"
+merit "that generate Elevator Pitch template automatically"
+diff_of_competition "Unlike manuall-create that is redundant operation"
+most_important_point "it provides formated template for Elevator Pitch"
