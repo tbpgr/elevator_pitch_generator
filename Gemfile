@@ -6,4 +6,6 @@ gem "thor", "~> 0.18.1"
 gem "simplecov", "~> 0.8.2"
 gem "activesupport", "~> 4.0.1"
 gem "activemodel", "~> 4.0.2"
-gem 'coveralls'
+group :test do
+  gem 'coveralls', require: false
+end
