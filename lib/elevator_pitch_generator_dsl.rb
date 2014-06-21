@@ -10,14 +10,14 @@ module ElevatorPitchGenerator
     # String Define
     [:needs, :target, :product_name, :category, :merit, :diff_of_competition, :most_important_point].each do |f|
       define_method f do |value|
-        eval "@elevator_pitch_generator.#{f.to_s} = '#{value}'", binding
+        eval "@elevator_pitch_generator.#{f} = '#{value}'", binding
       end
     end
 
     # Array/Hash/Boolean Define
     [].each do |f|
       define_method f do |value|
-        eval "@elevator_pitch_generator.#{f.to_s} = #{value}", binding
+        eval "@elevator_pitch_generator.#{f} = #{value}", binding
       end
     end
     # rubocop:enable Eval

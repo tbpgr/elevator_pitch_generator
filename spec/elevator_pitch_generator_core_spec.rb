@@ -50,7 +50,7 @@ most_important_point "it provides formated template for Elevator Pitch"
           elevator_pitch_generator_core.execute
 
           # -- then --
-          file_exists = File.exists?(c[:expected_file_name])
+          file_exists = File.exist?(c[:expected_file_name])
           expect(file_exists).to be_true
           actual = File.read(c[:expected_file_name])
           expect(actual).to eq(c[:expected_file_content])
@@ -60,14 +60,14 @@ most_important_point "it provides formated template for Elevator Pitch"
       end
 
       def case_before(c)
-        Dir.mkdir(OUTPUT_TMP_DIR) unless Dir.exists? OUTPUT_TMP_DIR
+        Dir.mkdir(OUTPUT_TMP_DIR) unless Dir.exist? OUTPUT_TMP_DIR
         Dir.chdir(OUTPUT_TMP_DIR)
         File.open(ElevatorPitchGenerator::Core::ELEVATOR_PITCH_GENERATOR_FILE, 'w:utf-8') { |f|f.print c[:input] }
       end
 
       def case_after(c)
         Dir.chdir('../')
-        FileUtils.rm_rf(OUTPUT_TMP_DIR) if Dir.exists? OUTPUT_TMP_DIR
+        FileUtils.rm_rf(OUTPUT_TMP_DIR) if Dir.exist? OUTPUT_TMP_DIR
       end
     end
   end

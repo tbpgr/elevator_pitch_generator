@@ -76,7 +76,7 @@ most_important_point "it TODO: write most important point"
       src = read_dsl
       dsl = ElevatorPitchGenerator::Dsl.new
       dsl.instance_eval src
-      Dir.mkdir('elevator_pitch') unless Dir.exists?('elevator_pitch')
+      Dir.mkdir('elevator_pitch') unless Dir.exist?('elevator_pitch')
       File.open(ELEVATOR_PITCH_OUTPUT_PATH, 'w:UTF-8') { |f|f.print adapt_template(dsl) }
     end
 
