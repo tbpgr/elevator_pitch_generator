@@ -1,4 +1,1 @@
-LineLength:
-  Enabled: false
-Semicolon:
-  Enabled: false
+inherit_from: rubocop-todo.yml
