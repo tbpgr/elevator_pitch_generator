@@ -34,8 +34,8 @@ most_important_point "it provides formated template for Elevator Pitch"
         case_title: 'valid elevator pitch',
         input: INPUT_CASE1,
         expected_file_name: './elevator_pitch/README.md',
-        expected_file_content: EXPECTED_OUTPUT_CASE1,
-      },
+        expected_file_content: EXPECTED_OUTPUT_CASE1
+      }
     ]
 
     cases.each do |c|
