@@ -66,7 +66,7 @@ most_important_point "it provides formated template for Elevator Pitch"
         File.open(gem_file, 'w:utf-8') { |f|f.print c[:input] }
       end
 
-      def case_after(c)
+      def case_after(c) # rubocop:disable UnusedMethodArgument
         Dir.chdir('../')
         FileUtils.rm_rf(OUTPUT_TMP_DIR) if Dir.exist? OUTPUT_TMP_DIR
       end
