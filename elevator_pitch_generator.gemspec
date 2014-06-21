@@ -3,6 +3,7 @@ lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'elevator_pitch_generator/version'
 
+# rubocop:disable LineLength
 Gem::Specification.new do |spec|
   spec.name          = 'elevator_pitch_generator'
   spec.version       = ElevatorPitchGenerator::VERSION
@@ -27,3 +28,4 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'simplecov', '~> 0.8.2'
   spec.add_development_dependency 'coveralls'
 end
+# rubocop:enable LineLength

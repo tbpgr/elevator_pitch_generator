@@ -6,22 +6,23 @@ module ElevatorPitchGenerator
   class Dsl
     attr_accessor :elevator_pitch_generator
 
-    # rubocop:disable Eval
     # String Define
-    [:needs, :target, :product_name, :category, :merit, :diff_of_competition, :most_important_point].each do |f|
+    [
+      :needs, :target, :product_name, :category,
+      :merit, :diff_of_competition, :most_important_point].each do |f|
       define_method f do |value|
-        eval "@elevator_pitch_generator.#{f} = '#{value}'", binding
+        @elevator_pitch_generator.send("#{f}=", value)
       end
     end
 
     # Array/Hash/Boolean Define
     [].each do |f|
       define_method f do |value|
-        eval "@elevator_pitch_generator.#{f} = #{value}", binding
+        @elevator_pitch_generator.send("#{f}=", value)
       end
     end
-    # rubocop:enable Eval
 
+    # rubocop:disable LineLength
     def initialize
       @elevator_pitch_generator = ElevatorPitchGenerator::DslModel.new
       @elevator_pitch_generator.needs = 'For TODO: write potential needs or solution'
@@ -32,5 +33,6 @@ module ElevatorPitchGenerator
       @elevator_pitch_generator.diff_of_competition = 'Unlike TODO: write difference of competition'
       @elevator_pitch_generator.most_important_point = 'it TODO: write most important point'
     end
+    # rubocop:enable LineLength
   end
 end

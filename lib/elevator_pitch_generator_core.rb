@@ -7,6 +7,8 @@ module ElevatorPitchGenerator
   #  ElevatorPitchGenerator Core
   class Core
     ELEVATOR_PITCH_GENERATOR_FILE = 'Epitchfile'
+
+    # rubocop:disable LineLength
     ELEVATOR_PITCH_GENERATOR_TEMPLATE = <<-EOS
 # encoding: utf-8
 
@@ -65,10 +67,13 @@ most_important_point "it TODO: write most important point"
 ## <%=diff_of_competition%>
 ## <%=most_important_point%>
     EOS
+    # rubocop:enable LineLength
 
     # == generate Epitchfile to current directory.
     def init
-      File.open(ELEVATOR_PITCH_GENERATOR_FILE, 'w') { |f|f.puts ELEVATOR_PITCH_GENERATOR_TEMPLATE }
+      File.open(ELEVATOR_PITCH_GENERATOR_FILE, 'w') do |f|
+        f.puts ELEVATOR_PITCH_GENERATOR_TEMPLATE
+      end
     end
 
     # == generate Elevator Pitch
@@ -77,7 +82,9 @@ most_important_point "it TODO: write most important point"
       dsl = ElevatorPitchGenerator::Dsl.new
       dsl.instance_eval src
       Dir.mkdir('elevator_pitch') unless Dir.exist?('elevator_pitch')
-      File.open(ELEVATOR_PITCH_OUTPUT_PATH, 'w:UTF-8') { |f|f.print adapt_template(dsl) }
+      File.open(ELEVATOR_PITCH_OUTPUT_PATH, 'w:UTF-8') do |f|
+        f.print adapt_template(dsl)
+      end
     end
 
     private

@@ -6,8 +6,8 @@
 # versions of RuboCop, may require this file to be generated again.
 
 # Offense count: 10
-LineLength:
-  Max: 114
+# LineLength:
+#   Max: 114
 
 # Offense count: 2
 RegexpLiteral:

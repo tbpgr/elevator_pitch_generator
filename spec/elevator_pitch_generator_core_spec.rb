@@ -62,7 +62,8 @@ most_important_point "it provides formated template for Elevator Pitch"
       def case_before(c)
         Dir.mkdir(OUTPUT_TMP_DIR) unless Dir.exist? OUTPUT_TMP_DIR
         Dir.chdir(OUTPUT_TMP_DIR)
-        File.open(ElevatorPitchGenerator::Core::ELEVATOR_PITCH_GENERATOR_FILE, 'w:utf-8') { |f|f.print c[:input] }
+        gem_file = ElevatorPitchGenerator::Core::ELEVATOR_PITCH_GENERATOR_FILE
+        File.open(gem_file, 'w:utf-8') { |f|f.print c[:input] }
       end
 
       def case_after(c)
