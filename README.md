@@ -1,5 +1,6 @@
 # ElevatorPitchGenerator
 
+[![Gem Version](https://badge.fury.io/rb/elevator_pitch_generator.svg)](http://badge.fury.io/rb/elevator_pitch_generator)
 [![Build Status](https://travis-ci.org/tbpgr/elevator_pitch_generator.png?branch=master)](https://travis-ci.org/tbpgr/elevator_pitch_generator)
 [![Coverage Status](https://coveralls.io/repos/tbpgr/elevator_pitch_generator/badge.png)](https://coveralls.io/r/tbpgr/elevator_pitch_generator)
 [![Code Climate](https://codeclimate.com/github/tbpgr/elevator_pitch_generator.png)](https://codeclimate.com/github/tbpgr/elevator_pitch_generator)
